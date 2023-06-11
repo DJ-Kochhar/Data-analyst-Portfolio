@@ -274,3 +274,11 @@ group by
 	customer_id
 order by
 	a.customer_id;
+	
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
