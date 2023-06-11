@@ -1,5 +1,5 @@
 /*how many moives are in our inventory?*/
-	select distinct
+	select distinct 
 		count(*)
 	from
 		film;
