@@ -31,12 +31,14 @@ d.name
 order by
 film_id;
 
--- which genre provides us with the most revenue?
+-- which genre provides us with the most revenue? What percentage to total sales does each genre account for?
 select
 	e.name as 'genre',
     sum(a.amount) as 'revenue per category',
     sum(sum(a.amount))
-		over () as 'grand total'
+		over () as 'grand total',
+	((sum(a.amount)) / (sum(sum(a.amount))
+		over ()) * 100) as 'percentage of total sales'
 from
 	payment as a
 inner join
